@@ -4,7 +4,7 @@ if [ -d "/etc/squid/" ]; then
 elif [ -d "/etc/squid3/" ]; then
 	payload="/etc/squid3/payload.txt"
 fi
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-10s\n' "Adicionar Host ao Squid Proxy" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-10s\n' "Add Host to Squid Proxy" ; tput sgr0
 if [ ! -f "$payload" ]
 then
 	tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Arquivo $payload não encontrado" ; tput sgr0
