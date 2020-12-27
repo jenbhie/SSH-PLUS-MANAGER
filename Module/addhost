@@ -20,7 +20,7 @@ else
 	else
 		if [[ `grep -c "^$host" $payload` -eq 1 ]]
 		then
-			tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "The domain $host already exists in the file $payload" ; echo "" ; tput sgr0
+			tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "The $host domain already exists in the $payload file" ; echo "" ; tput sgr0
 			exit 1
 		else
 			if [[ $host != \.* ]]
