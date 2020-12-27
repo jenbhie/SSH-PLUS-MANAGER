@@ -64,7 +64,7 @@ echo -e "\n\033[1;36mCHECKING... \033[1;37m 16983:16085\033[0m" ; rm $_Ink/list 
 sleep 3s
 echo "/bin/menu" > /bin/h && chmod +x /bin/h > /dev/null 2>&1
 rm versao* > /dev/null 2>&1
-wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/versao > /dev/null 2>&1
+wget https://raw.githubusercontent.com/jenbhie/SSH-PLUS-MANAGER/main/versao > /dev/null 2>&1
 #-----------------------------------------------------------------------------------------------------------------
 echo -e "\n\033[1;32mKEY IS VALID!\033[1;32m"
 sleep 1s
