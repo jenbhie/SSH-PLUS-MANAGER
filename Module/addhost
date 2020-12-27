@@ -7,20 +7,20 @@ fi
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-10s\n' "Add Host to Squid Proxy" ; tput sgr0
 if [ ! -f "$payload" ]
 then
-	tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Arquivo $payload não encontrado" ; tput sgr0
+	tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Archive $payload not found" ; tput sgr0
 	exit 1
 else
-	tput setaf 2 ; tput bold ; echo ""; echo "Domínios atuais no arquivo $payload:" ; tput sgr0
+	tput setaf 2 ; tput bold ; echo ""; echo "Current domains in the file $payload:" ; tput sgr0
 	tput setaf 3 ; tput bold ; echo "" ; cat $payload ; echo "" ; tput sgr0
-	read -p "Digite o domínio que deseja adicionar a lista: " host
+	read -p "Enter the domain you want to add to the list: " host
 	if [[ -z $host ]]
 	then
-		tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Você digitou um domínio vazio ou não existente!" ; echo "" ; tput sgr0
+		tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "You entered an empty or non-existing domain!" ; echo "" ; tput sgr0
 		exit 1
 	else
 		if [[ `grep -c "^$host" $payload` -eq 1 ]]
 		then
-			tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "O domínio $host já existe no arquivo $payload" ; echo "" ; tput sgr0
+			tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "The domain $host already exists in the file $payload" ; echo "" ; tput sgr0
 			exit 1
 		else
 			if [[ $host != \.* ]]
