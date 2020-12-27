@@ -38,7 +38,7 @@ rm $_dir2/ShellBot.sh $_dir2/cabecalho $_dir2/open.py $_dir2/proxy.py >/dev/null
 _mdls=("addhost" "delhost" "changepassword" "createuser" "expcleaner" "changedate" "remove" "createtest" "checkbot" "droplimiter" "changelimit" "help" "sshmonitor" "badvpn" "userbackup" "block" "optimize" "menu" "speedtest" "banner" "passwordroot" "restartservices" "restartsystem" "attscript" "connection" "delscript" "details" "botssh" "usersinfo" "verifatt" "limiter" "uexpired" "instsqd" "header" "bot" "open.py" "proxy.py")
 for _arq in ${_mdls[@]}; do
 	[[ -e $_dir1/$_arq ]] && rm $_dir1/$_arq >/dev/null 2>&1
-	wget -c -P $_dir1 https://raw.githubusercontent.com/jenbhie/SSH-PLUS-MANAGER/main/Module/$_arq
+	wget -c -P $_dir1 https://raw.githubusercontent.com/jenbhie/SSH-PLUS-MANAGER/main/Modules/$_arq
 	chmod +x $_dir1/$_arq
 done
 mv $_dir1/cabecalho $_dir1/bot $_dir1/open.py $_dir1/proxy.py $_dir2
