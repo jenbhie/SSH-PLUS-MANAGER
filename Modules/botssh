@@ -89,8 +89,8 @@ fun_instbot() {
     echo -e "\n\033[1;32m3° \033[1;37m- \033[1;33mBOT \033[1;37m@SSHPLUS_BOT \033[1;33mAND GET YOUR ID \033[1;31mOPTION: \033[1;37m/id\033[0m"
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[1;32m"
     echo ""
-    read -p "DO YOU WISH TO CONTINUE ? [s/n]: " -e -i s resposta
-    [[ "$resposta" = 's' ]] && {
+    read -p "DO YOU WISH TO CONTINUE ? [y/n]: " -e -i s resposta
+    [[ "$resposta" = 'y' ]] && {
         fun_botOnOff
     } || {
         echo -e "\n\033[1;31mReturning...\033[0m"

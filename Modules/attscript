@@ -120,9 +120,9 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
   echo " "
 
-  echo -ne "  \033[1;32mDO YOU WANT TO UPDATE \033[1;31m? \033[1;33m[s/n]:\033[1;37m "; read res
+  echo -ne "  \033[1;32mDO YOU WANT TO UPDATE \033[1;31m? \033[1;33m[y/n]:\033[1;37m "; read res
 
-  if [[ "$res" = s || "$res" = S ]];then
+  if [[ "$res" = y || "$res" = Y ]];then
 
     echo -e "\n\033[1;32m  STARTING UPDATE..."
 

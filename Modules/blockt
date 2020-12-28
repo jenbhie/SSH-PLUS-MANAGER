@@ -50,9 +50,9 @@ if [[ "$resp" = 'y' ]]; then
 	if [[ -e /etc/openvpn/openvpn-status.log ]]; then
 		echo -e "\033[1;31m[\033[1;33m!\033[1;31m]\033[1;33m RESTART THE SYSTEM TO COMPLETE"
 		echo ""
-		read -p "$(echo -e "\033[1;32mRESTART NOW \033[1;31m? \033[1;33m[s/n]:\033[1;37m ")" -e -i s respost
+		read -p "$(echo -e "\033[1;32mRESTART NOW \033[1;31m? \033[1;33m[y/n]:\033[1;37m ")" -e -i s respost
 		echo ""
-		if [[ "$respost" = 's' ]]; then
+		if [[ "$respost" = 'y' ]]; then
 			echo -ne "\033[1;31mRestarting" 
 			for i in $(seq 1 1 5); do
 				echo -n "."
