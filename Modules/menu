@@ -218,11 +218,11 @@ case "$x" in
    ;;
    22)
    clear
-   restart system
+   restartsystem
    ;;
    23)
    clear
-   restart services
+   restartservices
    sleep 3
    ;;
    24)
@@ -323,7 +323,7 @@ case "$x" in
    ;;
    2 | 02)
    clear
-   createtestuser
+   createtest
    echo -ne "\n\033[1;31mENTER \033[1;33mto return to \033[1;32mMENU!\033[0m"; read
    ;;
    3 | 03)
