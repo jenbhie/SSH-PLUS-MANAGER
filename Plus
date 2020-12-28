@@ -69,13 +69,13 @@ wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FR
 echo -e "\n\033[1;32mKEY OK!\033[1;32m"
 sleep 1s
 echo ""
-[[ -f "$HOME/usuarios.db" ]] && {
+[[ -f "$HOME/users.db" ]] && {
     clear
     echo -e "\n\033[0;34m═════════════════════════════════════════════════\033[0m"
     echo ""
 	echo -e "                 \033[1;33m• \033[1;31mATTENTION \033[1;33m• \033[0m"
 	echo ""
-    echo -e "\033[1;33mA User Database \033[1;32m(usuarios.db) \033[1;33mwas" 
+    echo -e "\033[1;33mA User Database \033[1;32m(users.db) \033[1;33mwas" 
     echo -e "Found! Do you want to keep it while preserving the limit"
 	echo -e "from Users' Simultaneous Connections? Or Do You Want To"
     echo -e "create a new database?\033[0m"
@@ -85,9 +85,9 @@ echo ""
     echo ""
 	tput setaf 2 ; tput bold ; read -p "Please Select: " -e -i 1 optiondb ; tput sgr0
 } || {
-	awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
+	awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/users.db
 }
-[[ "$optiondb" = '2' ]] && awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
+[[ "$optiondb" = '2' ]] && awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/users.db
 clear
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-18s\n' " WAIT FOR INSTALLATION" ; tput sgr0
 echo ""
@@ -104,7 +104,7 @@ clear
 echo ""
 echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mINSTALLING PACKAGES \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
-echo -e "     \033[1;33mSOME PACKAGES ARE NECESSARY!\033[0m"
+echo -e "          \033[1;33mSOME PACKAGES ARE NECESSARY!\033[0m"
 echo ""
 inst_pct () {
 _packages=("bc" "screen" "nano" "unzip" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip")
