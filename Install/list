@@ -1,8 +1,8 @@
 #!/bin/bash
 #====================================================
-#	SCRIPT: SSHPLUS MANAGER
-#   DATE:   Dec 28 2020
-#	TRANSLATED BY:	JENBHIE
+#     SCRIPT: SSHPLUS MANAGER
+#     DATE: Dec 28 2020
+#     TRANSLATED BY: JENBHIE
 #====================================================
 _lvk=$(wget -qO- https://raw.githubusercontent.com/jenbhie/SSH-PLUS-MANAGER/main/Install/version)
 IP=$(wget -qO- ipv4.icanhazip.com)
