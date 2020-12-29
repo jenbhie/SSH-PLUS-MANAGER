@@ -106,7 +106,7 @@ clear
 echo ""
 echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mINSTALLING PACKAGES \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
-echo -e "        \033[1;33mSOME PACKAGES ARE NECESSARY TO INSTALL !\033[0m"
+echo -e "    \033[1;33mSOME PACKAGES ARE NECESSARY TO INSTALL !\033[0m"
 echo ""
 inst_pct () {
 _packages=("bc" "screen" "nano" "unzip" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip")
