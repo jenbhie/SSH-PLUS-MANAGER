@@ -1,6 +1,6 @@
 #!/bin/bash
 #====================================================
-#	SCRIPT: SQUID PROXY SSHPLUS MANAGER
+#	SCRIPT: SSHPLUS MANAGER CONNECTION
 #	TRANSLATED BY:	JENBHIE
 #====================================================
 [[ $(awk -F" " '{print $2}' /usr/lib/licence) == "@CRAZY_VPN" ]] && {
