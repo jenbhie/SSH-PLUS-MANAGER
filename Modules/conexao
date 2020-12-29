@@ -1243,7 +1243,7 @@ exit 0' >$RCLOCAL
 
 	fun_socks() {
 		clear
-		echo -e "\E[44;1;37m            MANAGING PROXY SOCKS             \E[0m"
+		echo -e "\E[44;1;37m            MANAGING SOCKS PROXY            \E[0m"
 		echo ""
 		[[ $(netstat -nplt | grep -wc 'python') != '0' ]] && {
 			sks='\033[1;32mON'
