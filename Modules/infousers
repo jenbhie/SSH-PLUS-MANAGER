@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-echo -e "\E[44;1;37m User            Password          Limit         Validity \E[0m"
+echo -e "\E[44;1;37m User                 Password               Limit         Validity \E[0m"
 echo ""
 [[ ! -e /bin/version ]] && rm -rf /bin/menu
 for users in `awk -F : '$3 > 900 { print $1 }' /etc/passwd |sort |grep -v "nobody" |grep -vi polkitd |grep -vi system-`
@@ -34,7 +34,7 @@ Usuario=$(printf ' %-15s' "$users")
 Senha=$(printf '%-13s' "$senha")
 Limite=$(printf '%-10s' "$lim")
 Data=$(printf '%-1s' "$data")
-echo -e "\033[1;33m$Usuario \033[1;37m$Senha      \033[1;37m$Limite \033[1;32m$Data\033[0m"
+echo -e "\033[1;33m$Usuario      \033[1;37m$Senha            \033[1;37m$Limite   \033[1;32m$Data\033[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 done
 echo ""
